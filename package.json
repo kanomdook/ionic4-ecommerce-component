@@ -1,6 +1,6 @@
 {
     "name": "ionic4-ecommerce-component",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "ionic4 ecommerce module",
     "main": "./dist/index.js",
     "typings": "./dist/index.d.ts",
@@ -14,10 +14,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+"
+        "url": "git+https://github.com/kanomdook/ionic4-ecommerce-component.git"
     },
     "keywords": [],
-    "author": "dookdik",
+    "author": "Kanung Hoksang",
     "license": "MIT",
     "devDependencies": {
         "@angular/common": "7.0.1",
