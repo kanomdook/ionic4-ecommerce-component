@@ -1,6 +1,8 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { EcommerceCategoryComponent } from './components/ecommerce-category/ecommerce-category.component';
 import { EcommerceBestsellerScrollxComponent } from './components/ecommerce-bestseller-scrollx/ecommerce-bestseller-scrollx.component';
 import { EcommerceCartComponent } from './components/ecommerce-cart/ecommerce-cart.component';
@@ -12,7 +14,8 @@ import { EcommerceProductDetailComponent } from './components/ecommerce-product-
 @NgModule({
     imports: [
         IonicModule,
-        CommonModule
+        CommonModule,
+        FormsModule
     ],
     declarations: [
         EcommerceBestsellerScrollxComponent,
@@ -31,7 +34,8 @@ import { EcommerceProductDetailComponent } from './components/ecommerce-product-
         EcommerceCommentOverviewComponent,
         EcommerceFollowComponent,
         EcommerceProductDetailComponent
-    ]
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Ionic4EcommerceModule {
     static forRoot(): ModuleWithProviders {

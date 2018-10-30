@@ -4,9 +4,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EcommerceCategoryComponent } from './components/ecommerce-category/ecommerce-category.component';
 import { EcommerceBestsellerScrollxComponent } from './components/ecommerce-bestseller-scrollx/ecommerce-bestseller-scrollx.component';
 import { EcommerceCartComponent } from './components/ecommerce-cart/ecommerce-cart.component';
@@ -29,7 +30,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
         NgModule({
             imports: [
                 IonicModule,
-                CommonModule
+                CommonModule,
+                FormsModule
             ],
             declarations: [
                 EcommerceBestsellerScrollxComponent,
@@ -48,7 +50,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceCommentOverviewComponent,
                 EcommerceFollowComponent,
                 EcommerceProductDetailComponent
-            ]
+            ],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })
     ], Ionic4EcommerceModule);
     return Ionic4EcommerceModule;
