@@ -52,7 +52,7 @@ const CSS_STYLE = `
   
 `;
 @Component({
-    selector: 'app-ion-rating',
+    selector: 'message',
     template: HTML_TEMPLATE,
     styles: [CSS_STYLE]
 })
