@@ -10,3 +10,4 @@ export { EcommerceSlideImageComponent } from './components/ecommerce-slide-image
 export { EcommerceProductGridComponent } from './components/ecommerce-product-grid/ecommerce-product-grid.component';
 export { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
 export { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
+export { EcommerceShopGridComponent } from './components/ecommerce-shop-grid/ecommerce-shop-grid.component';

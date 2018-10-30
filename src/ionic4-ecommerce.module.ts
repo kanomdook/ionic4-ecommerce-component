@@ -14,6 +14,7 @@ import { EcommerceSlideImageComponent } from './components/ecommerce-slide-image
 import { EcommerceProductGridComponent } from './components/ecommerce-product-grid/ecommerce-product-grid.component';
 import { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
 import { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
+import { EcommerceShopGridComponent } from './components/ecommerce-shop-grid/ecommerce-shop-grid.component';
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce
         EcommerceSlideImageComponent,
         EcommerceProductGridComponent,
         EcommerceProductlistBestsellerComponent,
-        EcommerceProductlistSpecialsaleComponent
+        EcommerceProductlistSpecialsaleComponent,
+        EcommerceShopGridComponent
     ],
     exports: [
         EcommerceCategoryComponent,
@@ -45,7 +47,8 @@ import { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce
         EcommerceSlideImageComponent,
         EcommerceProductGridComponent,
         EcommerceProductlistBestsellerComponent,
-        EcommerceProductlistSpecialsaleComponent
+        EcommerceProductlistSpecialsaleComponent,
+        EcommerceShopGridComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
