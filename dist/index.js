@@ -11,4 +11,8 @@ export { EcommerceProductGridComponent } from './components/ecommerce-product-gr
 export { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
 export { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
 export { EcommerceShopGridComponent } from './components/ecommerce-shop-grid/ecommerce-shop-grid.component';
+export { EcommerceShopRecommendScrollxComponent } from './components/ecommerce-shop-recommend-scrollx/ecommerce-shop-recommend-scrollx.component';
+export { EcommerceShopdetailScrollheaderComponent } from './components/ecommerce-shopdetail-scrollheader/ecommerce-shopdetail-scrollheader.component';
+export { EcommerceSpecialsaleGridComponent } from './components/ecommerce-specialsale-grid/ecommerce-specialsale-grid.component';
+export { IonRatingComponent } from './components/ion-rating/ion-rating.component';
 //# sourceMappingURL=index.js.map

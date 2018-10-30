@@ -20,6 +20,10 @@ import { EcommerceProductGridComponent } from './components/ecommerce-product-gr
 import { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
 import { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
 import { EcommerceShopGridComponent } from './components/ecommerce-shop-grid/ecommerce-shop-grid.component';
+import { EcommerceShopRecommendScrollxComponent } from './components/ecommerce-shop-recommend-scrollx/ecommerce-shop-recommend-scrollx.component';
+import { EcommerceShopdetailScrollheaderComponent } from './components/ecommerce-shopdetail-scrollheader/ecommerce-shopdetail-scrollheader.component';
+import { EcommerceSpecialsaleGridComponent } from './components/ecommerce-specialsale-grid/ecommerce-specialsale-grid.component';
+import { IonRatingComponent } from './components/ion-rating/ion-rating.component';
 var Ionic4EcommerceModule = /** @class */ (function () {
     function Ionic4EcommerceModule() {
     }
@@ -50,7 +54,11 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceProductGridComponent,
                 EcommerceProductlistBestsellerComponent,
                 EcommerceProductlistSpecialsaleComponent,
-                EcommerceShopGridComponent
+                EcommerceShopGridComponent,
+                EcommerceShopRecommendScrollxComponent,
+                EcommerceShopdetailScrollheaderComponent,
+                EcommerceSpecialsaleGridComponent,
+                IonRatingComponent
             ],
             exports: [
                 EcommerceCategoryComponent,
@@ -64,7 +72,11 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceProductGridComponent,
                 EcommerceProductlistBestsellerComponent,
                 EcommerceProductlistSpecialsaleComponent,
-                EcommerceShopGridComponent
+                EcommerceShopGridComponent,
+                EcommerceShopRecommendScrollxComponent,
+                EcommerceShopdetailScrollheaderComponent,
+                EcommerceSpecialsaleGridComponent,
+                IonRatingComponent
             ],
             schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })
