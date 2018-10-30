@@ -6,6 +6,8 @@ import { EcommerceBestsellerScrollxComponent } from './components/ecommerce-best
 import { EcommerceCartComponent } from './components/ecommerce-cart/ecommerce-cart.component';
 import { EcommerceCommentAllComponent } from './components/ecommerce-comment-all/ecommerce-comment-all.component';
 import { EcommerceCommentOverviewComponent } from './components/ecommerce-comment-overview/ecommerce-comment-overview.component';
+import { EcommerceFollowComponent } from './components/ecommerce-follow/ecommerce-follow.component';
+import { EcommerceProductDetailComponent } from './components/ecommerce-product-detail/ecommerce-product-detail.component';
 
 @NgModule({
     imports: [
@@ -17,14 +19,18 @@ import { EcommerceCommentOverviewComponent } from './components/ecommerce-commen
         EcommerceCategoryComponent,
         EcommerceCartComponent,
         EcommerceCommentAllComponent,
-        EcommerceCommentOverviewComponent
+        EcommerceCommentOverviewComponent,
+        EcommerceFollowComponent,
+        EcommerceProductDetailComponent
     ],
     exports: [
         EcommerceCategoryComponent,
         EcommerceBestsellerScrollxComponent,
         EcommerceCartComponent,
         EcommerceCommentAllComponent,
-        EcommerceCommentOverviewComponent
+        EcommerceCommentOverviewComponent,
+        EcommerceFollowComponent,
+        EcommerceProductDetailComponent
     ]
 })
 export class Ionic4EcommerceModule {
