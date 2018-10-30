@@ -19,6 +19,7 @@ import { EcommerceShopRecommendScrollxComponent } from './components/ecommerce-s
 import { EcommerceShopdetailScrollheaderComponent } from './components/ecommerce-shopdetail-scrollheader/ecommerce-shopdetail-scrollheader.component';
 import { EcommerceSpecialsaleGridComponent } from './components/ecommerce-specialsale-grid/ecommerce-specialsale-grid.component';
 import { IonRatingComponent } from './components/ion-rating/ion-rating.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
     imports: [
@@ -42,7 +43,8 @@ import { IonRatingComponent } from './components/ion-rating/ion-rating.component
         EcommerceShopRecommendScrollxComponent,
         EcommerceShopdetailScrollheaderComponent,
         EcommerceSpecialsaleGridComponent,
-        IonRatingComponent
+        IonRatingComponent,
+        MessageComponent
     ],
     exports: [
         EcommerceCategoryComponent,
@@ -60,7 +62,8 @@ import { IonRatingComponent } from './components/ion-rating/ion-rating.component
         EcommerceShopRecommendScrollxComponent,
         EcommerceShopdetailScrollheaderComponent,
         EcommerceSpecialsaleGridComponent,
-        IonRatingComponent
+        IonRatingComponent,
+        MessageComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
