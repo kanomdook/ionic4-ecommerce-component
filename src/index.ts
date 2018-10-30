@@ -6,3 +6,4 @@ export { EcommerceCommentAllComponent } from './components/ecommerce-comment-all
 export { EcommerceCommentOverviewComponent } from './components/ecommerce-comment-overview/ecommerce-comment-overview.component';
 export { EcommerceFollowComponent } from './components/ecommerce-follow/ecommerce-follow.component';
 export { EcommerceProductDetailComponent } from './components/ecommerce-product-detail/ecommerce-product-detail.component';
+export { EcommerceSlideImageComponent } from './components/ecommerce-slide-image/ecommerce-slide-image.component';

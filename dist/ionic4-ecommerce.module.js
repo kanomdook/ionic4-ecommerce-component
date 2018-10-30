@@ -15,6 +15,7 @@ import { EcommerceCommentAllComponent } from './components/ecommerce-comment-all
 import { EcommerceCommentOverviewComponent } from './components/ecommerce-comment-overview/ecommerce-comment-overview.component';
 import { EcommerceFollowComponent } from './components/ecommerce-follow/ecommerce-follow.component';
 import { EcommerceProductDetailComponent } from './components/ecommerce-product-detail/ecommerce-product-detail.component';
+import { EcommerceSlideImageComponent } from './components/ecommerce-slide-image/ecommerce-slide-image.component';
 var Ionic4EcommerceModule = /** @class */ (function () {
     function Ionic4EcommerceModule() {
     }
@@ -40,7 +41,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceCommentAllComponent,
                 EcommerceCommentOverviewComponent,
                 EcommerceFollowComponent,
-                EcommerceProductDetailComponent
+                EcommerceProductDetailComponent,
+                EcommerceSlideImageComponent
             ],
             exports: [
                 EcommerceCategoryComponent,
@@ -49,7 +51,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceCommentAllComponent,
                 EcommerceCommentOverviewComponent,
                 EcommerceFollowComponent,
-                EcommerceProductDetailComponent
+                EcommerceProductDetailComponent,
+                EcommerceSlideImageComponent
             ],
             schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })

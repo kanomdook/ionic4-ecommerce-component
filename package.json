@@ -1,6 +1,6 @@
 {
     "name": "ionic4-ecommerce-component",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "description": "ionic4 ecommerce module",
     "main": "./dist/index.js",
     "typings": "./dist/index.d.ts",
