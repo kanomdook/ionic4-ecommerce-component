@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,cAAc,2BAA2B,CAAC;AAC1C,cAAc,8DAA8D,CAAC","sourcesContent":["export * from './ionic4-ecommerce.module';\r\nexport * from './components/ecommerce-category/ecommerce-category.component';"]}
