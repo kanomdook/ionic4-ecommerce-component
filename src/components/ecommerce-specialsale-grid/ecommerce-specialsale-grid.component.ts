@@ -13,18 +13,18 @@ const HTML_TEMPLATE = `
           <ion-col>
             <div class=" image-discount container">
               <!-- <ion-img src="assets/images/ribbon-discount.png"></ion-img> -->
-              <ion-img src="assets/icon/tagIcon.png"></ion-img>
+              <ion-img src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540789236/furnover/png/tagIcon.png"></ion-img>
               <div class="centered">
                 <p class="font-diccount">{{item.percentage}}%</p>
                 <p class="font-text-discount"> ลด</p>
               </div>
             </div>
-            <ion-img [src]="item.image.url"></ion-img>
+            <ion-img *ngIf="item && item.image && item.image.url"  [src]="item.image.url"></ion-img>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col no-padding>
-            <div no-padding style="text-align:center;"> 
+            <div no-padding style="text-align:center;">
               <p class="font-text-price">{{item.newprice}}</p>
             </div>
           </ion-col>
@@ -42,7 +42,7 @@ const HTML_TEMPLATE = `
       </ion-col>
       <ion-col size="4" *ngIf="!datas && !datas.items">
         <div class="position-div">
-          <img src="assets/images/play-symbol.png">
+          <img *ngIf="item && item.image && item.image.url"  src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540795721/furnover/png/play-symbol.png">
           <p class="more-button-text">ดูทั้งหมด</p>
         </div>
       </ion-col>
@@ -185,10 +185,8 @@ const CSS_STYLE = `
   styles: [CSS_STYLE]
 })
 export class EcommerceSpecialsaleGridComponent implements OnInit {
-
   @Input() datas: any;
   @Output() specialsaleGridData = new EventEmitter();
-
 
   constructor() {
   }

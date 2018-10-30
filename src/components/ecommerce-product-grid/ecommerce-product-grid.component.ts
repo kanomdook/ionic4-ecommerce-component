@@ -1,28 +1,38 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 const HTML_TEMPLATE = `
+<!-- สินค้าแนะนำประจำวัน
+<ion-card>
+  <ion-card-content>
+    <p>The content for this card</p>
+  </ion-card-content>
+</ion-card> -->
+
+
 <ion-grid no-padding>
-  <ion-row *ngIf="data && data.product && data.product.title">
+  <ion-row *ngIf="title">
     <ion-col class="font-text-title">
-      {{data.product.title}}
+      {{title}}
     </ion-col>
   </ion-row>
-  <ion-row no-padding *ngIf="data.product && data.product.items">
-    <ion-col size="6" size-sm="6" size-md="4" size-lg="3" *ngFor="let item of data.product.items" (click)="clickItem(item)">
-      <ion-card mode="md" class="bg-color no-box-shadow">
-        <ion-card-content class="padding-in">
+  <ion-row no-padding *ngIf="items && items.length > 0">
+    <ion-col size="6" size-sm="6" size-md="4" size-lg="3" *ngFor="let item of items" (click)="clickItem(item)">
+      <ion-card no-padding mode="md" class="bg-color no-box-shadow">
+        <ion-card-header no-padding>
           <ion-row>
             <ion-col no-padding size="12">
               <div class="container">
                 <div no-padding text-left class="img-car" *ngIf="item.shippingfeetag == true">
-                  <img src="/assets/images/delivery2.png" />
+                  <img src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540789212/furnover/png/delivery2.png" />
 
                 </div>
                 <div class=" position-pomo img-pomo">
 
                   <span>
 
-                    <img src="/assets/images/tagOutOfStock.png" *ngIf="item.stock == 0" />
-                    <img src="/assets/images/ribbon-discount.png" *ngIf="item.percentage > 0" />
+                    <img src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540789242/furnover/png/tagOutOfStock.png"
+                      *ngIf="item.stock == 0" />
+                    <img src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540789236/furnover/png/tagIcon.png"
+                      *ngIf="item.percentage > 0" />
                   </span>
 
                   <div class="centered" *ngIf="item.percentage > 0">
@@ -42,9 +52,19 @@ const HTML_TEMPLATE = `
               </div>
 
 
-
-              <ion-img class="img-size" [src]="item.image.url" *ngIf="item.image.url"></ion-img>
+              <!-- <img [src]="item.image.url"> -->
+              <div *ngIf="item && item.image && item.image.url" class="img-size-div">
+                <ion-img class="img-size" [src]="item.image.url"></ion-img>
+              </div>
+              <div *ngIf="!item || !item.image || !item.image.url" class="img-size-div">
+                <p class="img-gray no-margin"></p>
+              </div>
             </ion-col>
+          </ion-row>
+        </ion-card-header>
+        <ion-card-content class="padding-in">
+          <ion-row>
+
             <ion-col no-padding size="12">
               <div *ngIf="item.name" no-padding class="text-2line font-text padding-botton">
                 {{item.name}}
@@ -64,16 +84,26 @@ const HTML_TEMPLATE = `
 
               </div>
             </ion-col>
-            <ion-col no-padding size="4" *ngIf="item.likes">
+            <!-- <ion-col no-padding size="2">
+              <div no-padding text-right class="img-car" *ngIf="item.shippingfeetag == true">
+                <ion-img src="/assets/images/delivery2.png"></ion-img>
+
+              </div> -->
+            <!-- </ion-col> -->
+            <ion-col no-padding size="4">
               <span class="aa">
                 <ion-icon class="color-likes" name="heart-empty"></ion-icon>
               </span>
-              <span class=" margin-left2 padding-left font-text-price">{{item.likes}}</span>
+              <span class=" margin-left2 color-font font-text-price">{{item.likes}}</span>
+              <span *ngIf="!item.likes" class="font-text-price color-font margin-left2">0</span>
             </ion-col>
             <ion-col size="8" text-right no-padding class="font-text-price">
               <app-ion-rating [ratings]="item.ratings"></app-ion-rating>
-              <span class="color-font margin-left">({{item.reviews}})</span>
+              <span *ngIf="item && item.reviews" class="color-font margin-left">({{item.reviews}})</span>
+              <span class="color-font" *ngIf="!item.reviews">ยังไม่มีคะแนน</span>
             </ion-col>
+            <!-- <ion-col size="3" text-left no-padding> -->
+            <!-- </ion-col> -->
           </ion-row>
         </ion-card-content>
       </ion-card>
@@ -81,8 +111,7 @@ const HTML_TEMPLATE = `
 
   </ion-row>
 </ion-grid>
-<div text-center *ngIf="(data.product && data.product.items && data.product.items.length === 0)||!data.product
-||!data.product.items">
+<div text-center *ngIf="(items && items.length === 0)||!items">
   <p>ไม่มีสินค้าแนะนำ</p>
 </div>
 `;
@@ -95,6 +124,20 @@ const CSS_STYLE = `
 
 .img-size {
   width: 100% !important;
+  object-fit: cover !important;
+  height: 162px !important;
+}
+
+.img-gray {
+  background: rgb(233, 228, 228) !important;
+  width: 100% !important;
+  height: 162px !important;
+  object-fit: cover !important;
+}
+
+.img-size-div {
+  width: 100% !important;
+  height: 162px !important;
 }
 
 .text-2line {
@@ -164,6 +207,8 @@ const CSS_STYLE = `
   width: 30px !important;
   height: 0% !important;
   left: 0% !important;
+  margin-left: 5px !important;
+  margin-top: 8px !important;
 }
 
 .font-diccount {
@@ -280,7 +325,15 @@ img {
 }
 
 .margin-left2 {
-  margin-left: 12px !important;
+  margin-left: 8px !important;
+}
+
+.padding-like-left {
+  padding-left: 5% !important;
+}
+
+.no-margin {
+  margin: 0% !important;
 }
 `;
 @Component({
@@ -289,10 +342,12 @@ img {
   styles: [CSS_STYLE]
 })
 export class EcommerceProductGridComponent implements OnInit {
-  @Input() data: any = {};
+  @Input() items: Array<any> = [];
+  @Input() title: any = '';
   @Output() outPutData = new EventEmitter();
   getProduct: any;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 

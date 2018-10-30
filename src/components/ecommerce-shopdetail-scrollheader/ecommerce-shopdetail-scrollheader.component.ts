@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 const HTML_TEMPLATE = `
-
 <div class="shop-page-header" [ngStyle]="{'background-image': 'url('+ 'https://ichef.bbci.co.uk/news/660/cpsprodpb/8812/production/_102043843_dbc82227-5da2-4095-be51-a0d4bbbd9b88.jpg' + ')','top': '-163px'}">
   <div class="shop-page-header-mask">
     <ion-item lines="none">
@@ -23,8 +22,6 @@ const HTML_TEMPLATE = `
     </ion-item>
   </div>
 </div>
-
-
 `;
 
 const CSS_STYLE = `

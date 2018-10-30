@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NavController } from '@ionic/angular';
 const HTML_TEMPLATE = `
 <ion-grid style="background: white;">
   <ion-row>
     <ion-col size="6" text-left>
       <p>คะเเนนสินค้า</p>
-      <app-ion-rating></app-ion-rating>
+      <p>
+        <span>
+          <app-ion-rating [ratings]="overview.rating"></app-ion-rating>
+        </span>
+        <span>{{overview.reviews}}</span>
+      </p>
+
       <span class="color-font margin-left"></span>
     </ion-col>
     <ion-col size="6" text-right align-self-center>
-      <p class="see-more-text-style">ดูทั้งหมด</p>
+      <p class="see-more-text-style" (click)="toCommentAllPage()">ดูทั้งหมด</p>
     </ion-col>
   </ion-row>
 
@@ -19,13 +26,13 @@ const HTML_TEMPLATE = `
       </ion-avatar>
     </ion-col>
     <ion-col>
-      <p style="margin: 0;">เพียวเองงงงง</p>
+      <p style="margin: 0;">name</p>
       <p style="margin: 0;padding-top: 5px;">4/5</p>
       <p style="margin: 0;padding-top: 3px;">อาหารอร่อย ห้องน้ำสะอาด พนักงานบริการดี</p>
       <p style="margin: 0;padding-top: 5px;" class="date-comment-style">26-10-2018 17.40 | ตัวเลือกสินค้า : black</p>
     </ion-col>
   </ion-row>
-  <ion-row class="list-comment-style">
+  <!-- <ion-row class="list-comment-style">
     <ion-col size="2" text-center>
       <ion-avatar class="img-user-style ">
         <img src="assets/images/avatar.png">
@@ -37,16 +44,16 @@ const HTML_TEMPLATE = `
       <p style="margin: 0;padding-top: 3px;">อาหารอร่อย ห้องน้ำสะอาด พนักงานบริการดี</p>
       <p style="margin: 0;padding-top: 5px;" class="date-comment-style">26-10-2018 17.40 | ตัวเลือกสินค้า : black</p>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
 </ion-grid>
 `;
 
 const CSS_STYLE = `
 .img-user-style {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 50px !important;
-  max-height: 50px !important;
+  width:100% !important;  
+height : 100% !important;  
+max-width: 50px !important;  //any size
+max-height: 50px !important; //any size 
 }
 
 .date-comment-style {
@@ -61,7 +68,7 @@ const CSS_STYLE = `
 }
 
 .see-more-text-style {
-  color: #ff5722;
+  color:  #ff5722 ;
 }
 `;
 @Component({
@@ -71,9 +78,17 @@ const CSS_STYLE = `
 })
 export class EcommerceCommentOverviewComponent implements OnInit {
 
-  constructor() { }
+  @Input() overview: any;
+
+  constructor(
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
+    console.log(this.overview);
+  }
+  toCommentAllPage() {
+    this.navCtrl.navigateForward('comment-all');
   }
 
 }

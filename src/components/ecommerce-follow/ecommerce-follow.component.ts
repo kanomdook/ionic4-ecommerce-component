@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 const HTML_TEMPLATE = `
+
 <ion-card>
 
   <ion-item lines="none">
@@ -7,7 +8,7 @@ const HTML_TEMPLATE = `
       <img src="https://prtimes.jp/i/3563/252/resize/d3563-252-646957-2.jpg">
     </ion-avatar>
     <ion-label>
-      <h2 class="text-nor color-a">Sakura Beauty ซากุระบิวตี้</h2>
+      <h2 class="text-nor color-a" >Sakura Beauty ซากุระบิวตี้</h2>
     </ion-label>
     <ion-button color="danger" shape="round" fill="outline">
       <ion-icon name="add" ccolor="danger"></ion-icon>
@@ -67,32 +68,34 @@ const HTML_TEMPLATE = `
 `;
 
 const CSS_STYLE = `
-ion-card {
+ion-card{
   background-color: white;
   margin-right: 0px !important;
   margin-left: 0px !important;
   box-shadow: none !important;
-  .ion-button {
+  .ion-button{
       color: darkcyan !important;
   }
 }
-
-.button-add {
+.button-add{
   color: var(--ion-color-danger-shade) !important;
 }
 
-.text-nor {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  width: 100%;
-  min-width: 1px;
-}
+.text-nor{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display:block;
+      width:100%;
+      min-width:1px;
 
-.color-a {
-  color: var(--colorapp);
+      
 }
+    
+      .color-a{
+          color: var(--colorapp);
+      }
+
 `;
 @Component({
   selector: 'app-ecommerce-follow',

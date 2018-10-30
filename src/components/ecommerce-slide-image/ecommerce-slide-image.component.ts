@@ -1,10 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 const HTML_TEMPLATE = `
-<ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager >
-  <ion-slide size="12" *ngFor="let item of data.campaign" (click)="selectItem(item)">
+<ion-slides *ngIf="datas.length > 0" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" pager>
+  <ion-slide size="12" *ngFor="let item of datas" (click)="selectItem(item)">
     <img [src]="item.image.url" />
   </ion-slide>
 </ion-slides>
+
+<div *ngIf="datas && datas.image && datas.image.url">
+  <img [src]="datas.image.url" />
+</div>
 `;
 
 const CSS_STYLE = `
@@ -39,7 +43,7 @@ img {
   styles: [CSS_STYLE]
 })
 export class EcommerceSlideImageComponent implements OnInit {
-  @Input() data: any;
+  @Input() datas: any;
   @Output() itemSelected = new EventEmitter();
   slideOpts = {
     effect: 'slide',
@@ -50,12 +54,11 @@ export class EcommerceSlideImageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.data);
   }
-
   slidesDidLoad(slides) {
     slides.startAutoplay();
   }
-
   selectItem(item) {
     this.itemSelected.emit(item);
   }

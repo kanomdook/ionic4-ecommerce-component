@@ -209,7 +209,6 @@ ion-item {
   styles: [CSS_STYLE]
 })
 export class EcommerceProductlistSpecialsaleComponent implements OnInit {
-
   masterBar = 0;
   procentBar = 0;
   @Input() product: any = {

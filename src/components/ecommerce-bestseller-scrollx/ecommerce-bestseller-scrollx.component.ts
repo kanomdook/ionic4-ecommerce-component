@@ -12,7 +12,7 @@ const HTML_TEMPLATE = `
       <ion-col size="4" *ngFor="let item of items.items" (click)="sendData(item)">
         <ion-row>
           <ion-col>
-            <ion-img [src]="item.image.url"></ion-img>
+            <ion-img *ngIf="item && item.image && item.image.url" [src]="item.image.url"></ion-img>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -25,7 +25,7 @@ const HTML_TEMPLATE = `
       </ion-col>
       <ion-col size="4">
         <div class="position-div">
-          <img src="assets/images/play-symbol.png">
+          <img src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1540795721/furnover/png/play-symbol.png">
           <p class="more-button-text">ดูทั้งหมด</p>
         </div>
       </ion-col>
@@ -51,6 +51,7 @@ const CSS_STYLE = `
 }
 
 .progress {
+  // height: 20px;
   height: .985rem;
   margin-bottom: 20px;
   overflow: hidden; // background-color: rgb(255, 189, 166);
@@ -65,6 +66,7 @@ const CSS_STYLE = `
   width: 0;
   height: 100%;
   font-size: 12px;
+  // line-height: 20px;
   color: #fff;
   text-align: center; // background-color: #f25454;
   background-image: -webkit-linear-gradient(left, rgb(236, 31, 22), rgb(255, 172, 0)); // -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
@@ -134,6 +136,7 @@ const CSS_STYLE = `
 }
 
 .container {
+  // position: relative;
   text-align: center;
   color: white;
 }
@@ -147,6 +150,7 @@ const CSS_STYLE = `
 }
 
 .font-text-name {
+  // color: rgb(255, 38, 0) !important ;
   margin: 0;
   padding: 0;
 }
