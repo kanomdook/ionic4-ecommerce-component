@@ -12,7 +12,13 @@ const HTML_TEMPLATE = `
       <ion-col size="4" *ngFor="let item of items.items" (click)="sendData(item)">
         <ion-row>
           <ion-col>
-            <ion-img *ngIf="item && item.image && item.image.url" [src]="item.image.url"></ion-img>
+            <div *ngIf="item && item.image && item.image.url" class="img-size-div">
+              <ion-img class="img-size" [src]="item.image.url"></ion-img>
+            </div>
+
+            <div *ngIf="!item || !item.image || !item.image.url" class="img-size-div">
+              <p class="img-gray no-margin"></p>
+            </div>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -65,8 +71,7 @@ const CSS_STYLE = `
   float: left;
   width: 0;
   height: 100%;
-  font-size: 12px;
-  // line-height: 20px;
+  font-size: 12px; // line-height: 20px;
   color: #fff;
   text-align: center; // background-color: #f25454;
   background-image: -webkit-linear-gradient(left, rgb(236, 31, 22), rgb(255, 172, 0)); // -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
@@ -162,6 +167,27 @@ const CSS_STYLE = `
 
 .background-color-product {
   background-color: lightgrey !important;
+}
+
+.img-size {
+  width: 100% !important;
+  height: 162px !important;
+  object-fit: cover !important;
+}
+
+.img-gray {
+  background: rgb(233, 228, 228) !important;
+  width: 100% !important;
+  height: 162px !important;
+  object-fit: cover !important;
+}
+
+.img-size-div {
+  width: 100% !important;
+  height: 162px !important;
+}
+.no-margin{
+  margin: 0% !important;
 }
 `;
 

@@ -37,12 +37,12 @@ const HTML_TEMPLATE = `
 
                   <div class="centered" *ngIf="item.percentage > 0">
                     <p class="font-diccount">{{item.percentage}}%</p>
-                    <p class="font-text-discount">
+                    <p class="font-text-discount ">
                       ลด
                     </p>
                   </div>
                   <div class="out-of-stock" *ngIf="item.stock == 0">
-                    <p class="font-out-of-stock ">
+                    <p class="font-out-of-stock no-margin  ">
                       สินค้า
                       หมด
                     </p>
