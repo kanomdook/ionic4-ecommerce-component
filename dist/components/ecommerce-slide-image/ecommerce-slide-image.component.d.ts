@@ -1,6 +1,6 @@
 import { OnInit, EventEmitter } from '@angular/core';
 export declare class EcommerceSlideImageComponent implements OnInit {
-    data: any;
+    datas: any;
     itemSelected: EventEmitter<{}>;
     slideOpts: {
         effect: string;

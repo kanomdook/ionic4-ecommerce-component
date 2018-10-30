@@ -15,4 +15,5 @@ export { EcommerceShopRecommendScrollxComponent } from './components/ecommerce-s
 export { EcommerceShopdetailScrollheaderComponent } from './components/ecommerce-shopdetail-scrollheader/ecommerce-shopdetail-scrollheader.component';
 export { EcommerceSpecialsaleGridComponent } from './components/ecommerce-specialsale-grid/ecommerce-specialsale-grid.component';
 export { IonRatingComponent } from './components/ion-rating/ion-rating.component';
+export { MessageComponent } from './components/message/message.component';
 //# sourceMappingURL=index.js.map

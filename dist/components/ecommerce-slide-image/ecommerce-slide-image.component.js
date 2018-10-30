@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-var HTML_TEMPLATE = "\n<ion-slides #mySlider (ionSlidesDidLoad)=\"slidesDidLoad(mySlider)\" pager >\n  <ion-slide size=\"12\" *ngFor=\"let item of data.campaign\" (click)=\"selectItem(item)\">\n    <img [src]=\"item.image.url\" />\n  </ion-slide>\n</ion-slides>\n";
+var HTML_TEMPLATE = "\n<ion-slides *ngIf=\"datas.length > 0\" #mySlider (ionSlidesDidLoad)=\"slidesDidLoad(mySlider)\" pager>\n  <ion-slide size=\"12\" *ngFor=\"let item of datas\" (click)=\"selectItem(item)\">\n    <img [src]=\"item.image.url\" />\n  </ion-slide>\n</ion-slides>\n\n<div *ngIf=\"datas && datas.image && datas.image.url\">\n  <img [src]=\"datas.image.url\" />\n</div>\n";
 var CSS_STYLE = "\n.slide-overflow {\n  display: -webkit-box;\n  overflow-x: scroll;\n}\n\n.flex-warp-list {\n  flex-wrap: nowrap;\n}\n\n.background-color-grid {\n  background-color: white !important;\n}\n\nimg {\n  width: 100vw !important;\n}\n\n.size-img {\n  width: 50px !important;\n}\n\n.custom-swiper-pagination {\n  visibility: hidden;\n}\n";
 var EcommerceSlideImageComponent = /** @class */ (function () {
     function EcommerceSlideImageComponent() {
@@ -21,6 +21,7 @@ var EcommerceSlideImageComponent = /** @class */ (function () {
         };
     }
     EcommerceSlideImageComponent.prototype.ngOnInit = function () {
+        // console.log(this.data);
     };
     EcommerceSlideImageComponent.prototype.slidesDidLoad = function (slides) {
         slides.startAutoplay();
@@ -31,7 +32,7 @@ var EcommerceSlideImageComponent = /** @class */ (function () {
     __decorate([
         Input(),
         __metadata("design:type", Object)
-    ], EcommerceSlideImageComponent.prototype, "data", void 0);
+    ], EcommerceSlideImageComponent.prototype, "datas", void 0);
     __decorate([
         Output(),
         __metadata("design:type", Object)

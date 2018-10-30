@@ -24,6 +24,7 @@ import { EcommerceShopRecommendScrollxComponent } from './components/ecommerce-s
 import { EcommerceShopdetailScrollheaderComponent } from './components/ecommerce-shopdetail-scrollheader/ecommerce-shopdetail-scrollheader.component';
 import { EcommerceSpecialsaleGridComponent } from './components/ecommerce-specialsale-grid/ecommerce-specialsale-grid.component';
 import { IonRatingComponent } from './components/ion-rating/ion-rating.component';
+import { MessageComponent } from './components/message/message.component';
 var Ionic4EcommerceModule = /** @class */ (function () {
     function Ionic4EcommerceModule() {
     }
@@ -58,7 +59,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceShopRecommendScrollxComponent,
                 EcommerceShopdetailScrollheaderComponent,
                 EcommerceSpecialsaleGridComponent,
-                IonRatingComponent
+                IonRatingComponent,
+                MessageComponent
             ],
             exports: [
                 EcommerceCategoryComponent,
@@ -76,7 +78,8 @@ var Ionic4EcommerceModule = /** @class */ (function () {
                 EcommerceShopRecommendScrollxComponent,
                 EcommerceShopdetailScrollheaderComponent,
                 EcommerceSpecialsaleGridComponent,
-                IonRatingComponent
+                IonRatingComponent,
+                MessageComponent
             ],
             schemas: [CUSTOM_ELEMENTS_SCHEMA]
         })

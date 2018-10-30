@@ -1,6 +1,7 @@
 import { OnInit, EventEmitter } from '@angular/core';
 export declare class EcommerceProductGridComponent implements OnInit {
-    data: any;
+    items: Array<any>;
+    title: any;
     outPutData: EventEmitter<{}>;
     getProduct: any;
     constructor();
