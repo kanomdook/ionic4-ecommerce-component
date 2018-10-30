@@ -27,7 +27,7 @@ var MessageComponent = /** @class */ (function () {
     ], MessageComponent.prototype, "message", void 0);
     MessageComponent = __decorate([
         Component({
-            selector: 'app-ion-rating',
+            selector: 'message',
             template: HTML_TEMPLATE,
             styles: [CSS_STYLE]
         }),
