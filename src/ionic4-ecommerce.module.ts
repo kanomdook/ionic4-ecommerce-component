@@ -11,6 +11,9 @@ import { EcommerceCommentOverviewComponent } from './components/ecommerce-commen
 import { EcommerceFollowComponent } from './components/ecommerce-follow/ecommerce-follow.component';
 import { EcommerceProductDetailComponent } from './components/ecommerce-product-detail/ecommerce-product-detail.component';
 import { EcommerceSlideImageComponent } from './components/ecommerce-slide-image/ecommerce-slide-image.component';
+import { EcommerceProductGridComponent } from './components/ecommerce-product-grid/ecommerce-product-grid.component';
+import { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
+import { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
 
 @NgModule({
     imports: [
@@ -26,7 +29,10 @@ import { EcommerceSlideImageComponent } from './components/ecommerce-slide-image
         EcommerceCommentOverviewComponent,
         EcommerceFollowComponent,
         EcommerceProductDetailComponent,
-        EcommerceSlideImageComponent
+        EcommerceSlideImageComponent,
+        EcommerceProductGridComponent,
+        EcommerceProductlistBestsellerComponent,
+        EcommerceProductlistSpecialsaleComponent
     ],
     exports: [
         EcommerceCategoryComponent,
@@ -36,7 +42,10 @@ import { EcommerceSlideImageComponent } from './components/ecommerce-slide-image
         EcommerceCommentOverviewComponent,
         EcommerceFollowComponent,
         EcommerceProductDetailComponent,
-        EcommerceSlideImageComponent
+        EcommerceSlideImageComponent,
+        EcommerceProductGridComponent,
+        EcommerceProductlistBestsellerComponent,
+        EcommerceProductlistSpecialsaleComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

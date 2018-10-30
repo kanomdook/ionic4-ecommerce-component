@@ -7,3 +7,6 @@ export { EcommerceCommentOverviewComponent } from './components/ecommerce-commen
 export { EcommerceFollowComponent } from './components/ecommerce-follow/ecommerce-follow.component';
 export { EcommerceProductDetailComponent } from './components/ecommerce-product-detail/ecommerce-product-detail.component';
 export { EcommerceSlideImageComponent } from './components/ecommerce-slide-image/ecommerce-slide-image.component';
+export { EcommerceProductGridComponent } from './components/ecommerce-product-grid/ecommerce-product-grid.component';
+export { EcommerceProductlistBestsellerComponent } from './components/ecommerce-productlist-bestseller/ecommerce-productlist-bestseller.component';
+export { EcommerceProductlistSpecialsaleComponent } from './components/ecommerce-productlist-specialsale/ecommerce-productlist-specialsale.component';
